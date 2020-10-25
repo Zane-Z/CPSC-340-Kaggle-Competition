@@ -81,6 +81,9 @@ class LeastSquaresPoly:
         Z = self.__polyBasis(X)
         return Z@self.w
 
+    def print_w(self):
+        return self.w
+
     # A private helper function to transform any matrix X into
     # the polynomial basis defined by this class at initialization
     # Returns the matrix Z that is the polynomial basis of X.
