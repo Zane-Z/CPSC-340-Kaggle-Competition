@@ -62,7 +62,7 @@ def evaluate_model(model, X, y, X_test, y_test):
     print("    Testing error: %.3f" % te_error)
 
 
-def test_and_plot(model,X,y,Xtest=None,ytest=None,title=None,filename=None):
+def test_and_plot(model,X,y,Xtest=None,ytest=None,title=None,filename=None,isDraw=True):
 
     # Compute training error
     yhat = model.predict(X)
@@ -74,6 +74,8 @@ def test_and_plot(model,X,y,Xtest=None,ytest=None,title=None,filename=None):
         yhat = model.predict(Xtest)
         testError = np.mean((yhat - ytest)**2)
         print("Test error     = %.1f" % testError)
+        if (isDraw == False):
+            return testError
 
     # Plot model
     plt.figure()
