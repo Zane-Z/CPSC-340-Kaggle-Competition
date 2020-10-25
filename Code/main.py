@@ -121,10 +121,9 @@ if __name__ == "__main__":
 
 #--------------------------Kay Part----------------------------
 ts_model=TimeSeries()
-ts_model.matrix_to_tseries(y_can)
-new_max_from_function = ts_model.new_max
-new_y_from_function = ts_model.new_y
-
+#ts_model.matrix_to_tseries(y_can, y_can)
+new_X_from_function_3 = ts_model.get_tseries_X(y_can)
+new_Y_from_function_3 = ts_model.get_tseries_Y(y_can)
 
 
 
